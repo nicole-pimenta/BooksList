@@ -1,3 +1,4 @@
+import { ListContainer } from "./style";
 export const BookList = () => {
-  return <div>BookList</div>;
+  return <ListContainer>BookList</ListContainer>;
 };
