@@ -5,3 +5,5 @@ export const formSchema = z.object({
   author: z.string().min(3, "O autor é obrigatório"),
   description: z.string().min(3, "A descrição é obrigatória"),
 });
+
+export type TFormValues = z.infer<typeof formSchema>;

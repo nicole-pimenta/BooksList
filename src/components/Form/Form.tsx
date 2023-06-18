@@ -1,8 +1,8 @@
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./Input/Input";
 import { FormContainer } from "./style";
-import { formSchema } from "./formSchema";
+import { formSchema, TFormValues } from "./formSchema";
 
 export const Form = () => {
   const {
@@ -10,18 +10,18 @@ export const Form = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
+  } = useForm<TFormValues>({
     resolver: zodResolver(formSchema),
   });
 
-  const submit = (formData) => {
-    console.log(formData);
+  const onSubmit: SubmitHandler<TFormValues> = (data) => {
     reset();
+    console.log(data);
   };
 
   return (
     <FormContainer>
-      <form onSubmit={handleSubmit(submit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Input
           label="Título "
           placeholder="Digite aqui o título do seu livro"
