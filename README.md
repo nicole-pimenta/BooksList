@@ -15,6 +15,7 @@ Você poderá conferir a aplicação através da seguinte URL https://books-list
 <p align="center">
 <img src="https://img.shields.io/badge/vite-white?style=for-the-badge&logo=vite&logoColor=8B73FE"></img>
 <img src="https://img.shields.io/badge/react-white?style=for-the-badge&logo=vite&logoColor=8B73FE"></img>
+<img src="https://img.shields.io/badge/typescript-white?style=for-the-badge&logo=typescript&logoColor=8B73FE"></img>
 <img src="https://img.shields.io/badge/Styled--Components-444?style=for-the-badge&logo=styled-components&logoColor=white"></img>
 <img src="https://img.shields.io/badge/React--Hook--Form-gold?style=for-the-badge&logo=react&logoColor=black"></img>
 
