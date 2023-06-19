@@ -5,9 +5,10 @@ import { BookItem } from "../BookItem/BookItem";
 interface IBooksListProps {
   booksList: IBookList[];
   setBooksList: React.Dispatch<React.SetStateAction<IBookList[]>>;
+  handleDeleteBook: (id: string | undefined) => void;
 }
 
-export const BookList = ({ booksList, setBooksList }: IBooksListProps) => {
+export const BookList = ({ booksList, handleDeleteBook }: IBooksListProps) => {
   return (
     <ListContainer>
       <h4> Lista de Livros:</h4>
@@ -19,7 +20,11 @@ export const BookList = ({ booksList, setBooksList }: IBooksListProps) => {
       ) : (
         <ul>
           {booksList.map((book) => (
-            <BookItem key={book.id} book={book} setBooksList={setBooksList} />
+            <BookItem
+              key={book.id}
+              book={book}
+              handleDeleteBook={handleDeleteBook}
+            />
           ))}
         </ul>
       )}

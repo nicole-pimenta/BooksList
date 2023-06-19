@@ -15,12 +15,22 @@ export interface IBookList {
 export const Home = () => {
   const [booksList, setBooksList] = useState<IBookList[]>([]);
 
+  const handleDeleteBook = (id: string | undefined) => {
+    const filteredList = booksList.filter((book: IBookList) => book.id !== id);
+
+    setBooksList(filteredList);
+  };
+
   return (
     <>
       <Header />
       <StyledContainer>
         <Form booksList={booksList} setBooksList={setBooksList} />
-        <BookList booksList={booksList} setBooksList={setBooksList} />
+        <BookList
+          booksList={booksList}
+          setBooksList={setBooksList}
+          handleDeleteBook={handleDeleteBook}
+        />
       </StyledContainer>
       <Footer />
     </>

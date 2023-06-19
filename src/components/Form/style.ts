@@ -35,7 +35,7 @@ export const FormContainer = styled.div`
     }
 
     button:hover {
-      border: 2px solid #03b898;
+      border: 2px solid 0;
     }
   }
 `;

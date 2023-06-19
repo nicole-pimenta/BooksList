@@ -8,14 +8,10 @@ import {
 
 interface IBookItemProps {
   book: IBookList;
-  setBooksList: React.Dispatch<React.SetStateAction<IBookList[]>>;
+  handleDeleteBook: (id: string | undefined) => void;
 }
 
-export const BookItem = ({ book, setBooksList }: IBookItemProps) => {
-  const handleDeleteBook = (id: string | undefined) => {
-    console.log(id);
-  };
-
+export const BookItem = ({ book, handleDeleteBook }: IBookItemProps) => {
   return (
     <StyledCard>
       <StyledValueDescription>

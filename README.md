@@ -24,9 +24,10 @@ Você poderá conferir a aplicação através da seguinte URL https://your-budge
 
 - [Vite](https://vitejs.dev)
 - [React](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
-- [React HookForm](https://react-hook-form.com/)
 - [Zod](https://zod.dev/)
+- [UUID](https://www.npmjs.com/package/uuid)
 
 ## Estrutura do Projeto 📂
 
