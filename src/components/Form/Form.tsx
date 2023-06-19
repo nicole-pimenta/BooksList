@@ -4,6 +4,7 @@ import { Input } from "./Input/Input";
 import { FormContainer, StyledMessageError } from "./style";
 import { formSchema, TFormValues } from "./formSchema";
 import { IBookList } from "../../pages/Home/Home";
+import { v4 as uuidv4 } from "uuid";
 
 interface IFormProps {
   booksList: IBookList[];
@@ -21,7 +22,8 @@ export const Form = ({ booksList, setBooksList }: IFormProps) => {
   });
 
   const onSubmit: SubmitHandler<TFormValues> = (formValue) => {
-    setBooksList([...booksList, formValue]);
+    const currentBook = { ...formValue, id: uuidv4() };
+    setBooksList([...booksList, currentBook]);
 
     reset();
   };

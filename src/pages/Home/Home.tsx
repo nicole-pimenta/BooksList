@@ -6,6 +6,7 @@ import { StyledContainer } from "./style";
 import { useState } from "react";
 
 export interface IBookList {
+  id?: string;
   title: string;
   author: string;
   description: string;
