@@ -10,8 +10,8 @@ export const StyledInputContainer = styled.div`
     border-radius: 8px;
     padding: 0px 16px 0px 16px;
     border: 2px solid #f8f9fa;
-    background: var(--color-grey-2);
-    color: var(--color-grey-3);
+    background: #e9ecef;
+    color: #868e96;
   }
 
   @media (max-width: 800px) {

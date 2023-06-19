@@ -1,10 +1,16 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./Input/Input";
-import { FormContainer } from "./style";
+import { FormContainer, StyledMessageError } from "./style";
 import { formSchema, TFormValues } from "./formSchema";
+import { IBookList } from "../../pages/Home/Home";
 
-export const Form = () => {
+interface IFormProps {
+  booksList: IBookList[];
+  setBooksList: React.Dispatch<React.SetStateAction<IBookList[]>>;
+}
+
+export const Form = ({ booksList, setBooksList }: IFormProps) => {
   const {
     register,
     handleSubmit,
@@ -14,9 +20,10 @@ export const Form = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit: SubmitHandler<TFormValues> = (data) => {
+  const onSubmit: SubmitHandler<TFormValues> = (formValue) => {
+    setBooksList([...booksList, formValue]);
+
     reset();
-    console.log(data);
   };
 
   return (
@@ -29,7 +36,9 @@ export const Form = () => {
           id="title"
           {...register("title")}
         />
-        {errors.title ? <p>{errors.title.message}</p> : null}
+        {errors.title ? (
+          <StyledMessageError>{errors.title.message}</StyledMessageError>
+        ) : null}
         <Input
           label="Autor"
           placeholder="Digite aqui o autor do seu livro"
@@ -37,7 +46,9 @@ export const Form = () => {
           id="author"
           {...register("author")}
         />
-        {errors.author ? <p>{errors.author.message}</p> : null}
+        {errors.author ? (
+          <StyledMessageError>{errors.author.message}</StyledMessageError>
+        ) : null}
         <Input
           label="Descrição"
           placeholder="Digite aqui a descrição do seu livro"
@@ -45,7 +56,9 @@ export const Form = () => {
           id="description"
           {...register("description")}
         />
-        {errors.description ? <p>{errors.description.message}</p> : null}
+        {errors.description ? (
+          <StyledMessageError>{errors.description.message}</StyledMessageError>
+        ) : null}
 
         <button type="submit"> Inserir Livro</button>
       </form>
