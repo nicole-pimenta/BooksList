@@ -16,18 +16,15 @@ export const BookItem = ({ book, setBooksList }: IBookItemProps) => {
   };
 
   return (
-    <div>
-      BookItem
-      <StyledCard>
-        <StyledValueDescription>
-          <p>{book.title} </p>
-          <p>{book.author}</p>
-          <p>{book.description} </p>
-        </StyledValueDescription>
-        <StyledValueSection>
-          <button onClick={() => handleDeleteBook(book.id)}>excluir</button>
-        </StyledValueSection>
-      </StyledCard>
-    </div>
+    <StyledCard>
+      <StyledValueDescription>
+        <p>{book.title} </p>
+        <p>{book.author}</p>
+        <p>{book.description} </p>
+      </StyledValueDescription>
+      <StyledValueSection>
+        <button onClick={() => handleDeleteBook(book.id)}>excluir</button>
+      </StyledValueSection>
+    </StyledCard>
   );
 };

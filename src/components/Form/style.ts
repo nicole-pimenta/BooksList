@@ -27,10 +27,7 @@ export const FormContainer = styled.div`
       width: 100%;
       border-radius: 8px;
       padding: 13px 20px 13px 20px;
-      background: var(--color-primary);
-      border: 2px solid #fd377e;
-      color: var(--color-grey-2);
-      font-family: Inter;
+      border: 2px solid #2a68a2;
       font-size: 16px;
       font-weight: 400;
       line-height: 19px;
@@ -38,7 +35,7 @@ export const FormContainer = styled.div`
     }
 
     button:hover {
-      background: var(--color-primary-2);
+      border: 2px solid #03b898;
     }
   }
 `;
