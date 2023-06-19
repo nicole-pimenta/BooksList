@@ -44,3 +44,9 @@ export const StyledValueSection = styled.section`
     background-color: #03b898;
   }
 `;
+
+export const StyledTitle = styled.p`
+  color: #03b898;
+  font-weight: bolder;
+  font-size: 20px;
+`;

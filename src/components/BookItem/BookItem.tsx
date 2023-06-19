@@ -3,6 +3,7 @@ import {
   StyledCard,
   StyledValueSection,
   StyledValueDescription,
+  StyledTitle,
 } from "./style";
 
 interface IBookItemProps {
@@ -18,7 +19,7 @@ export const BookItem = ({ book, setBooksList }: IBookItemProps) => {
   return (
     <StyledCard>
       <StyledValueDescription>
-        <p>{book.title} </p>
+        <StyledTitle>{book.title} </StyledTitle>
         <p>{book.author}</p>
         <p>{book.description} </p>
       </StyledValueDescription>
