@@ -38,6 +38,10 @@ export const FormContainer = styled.div`
       border: 2px solid 0;
     }
   }
+
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 export const StyledMessageError = styled.span`

@@ -24,4 +24,8 @@ export const ListContainer = styled.div`
     gap: 10px;
     margin: 15px auto;
   }
+
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
