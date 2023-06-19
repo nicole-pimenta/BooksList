@@ -17,7 +17,7 @@ export const BookItem = ({ book, handleDeleteBook }: IBookItemProps) => {
       <StyledValueDescription>
         <StyledTitle>{book.title} </StyledTitle>
         <p>{book.author}</p>
-        <p>{book.description} </p>
+        <section>{book.description} </section>
       </StyledValueDescription>
       <StyledValueSection>
         <button onClick={() => handleDeleteBook(book.id)}>excluir</button>
