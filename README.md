@@ -5,10 +5,10 @@
 Aplicação criada para teste técnico de vaga para desenvolvedor React Jr.
 
 Plataforma de inserção e deleção de livros .
-Você poderá conferir a aplicação através da seguinte URL https://your-budget-eight.vercel.app/
+Você poderá conferir a aplicação através da seguinte URL https://books-list-lake.vercel.app/
 
 <div align="center">
-<img src="./src/assets/image.png" width="600px">
+<img src="./src/assets/bookList.png" width="600px">
 
 </div> <br>
 
