@@ -4,7 +4,7 @@ import { BookItem } from "../BookItem/BookItem";
 
 interface IBooksListProps {
   booksList: IBookList[];
-  setBooksList: React.Dispatch<React.SetStateAction<IBookList[]>>;
+
   handleDeleteBook: (id: string | undefined) => void;
 }
 
