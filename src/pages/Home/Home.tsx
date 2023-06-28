@@ -25,12 +25,8 @@ export const Home = () => {
     <>
       <Header />
       <StyledContainer>
-        <Form booksList={booksList} setBooksList={setBooksList} />
-        <BookList
-          booksList={booksList}
-          setBooksList={setBooksList}
-          handleDeleteBook={handleDeleteBook}
-        />
+        <Form setBooksList={setBooksList} />
+        <BookList booksList={booksList} handleDeleteBook={handleDeleteBook} />
       </StyledContainer>
       <Footer />
     </>

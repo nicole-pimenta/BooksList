@@ -7,11 +7,10 @@ import { IBookList } from "../../pages/Home/Home";
 import { v4 as uuidv4 } from "uuid";
 
 interface IFormProps {
-  booksList: IBookList[];
   setBooksList: React.Dispatch<React.SetStateAction<IBookList[]>>;
 }
 
-export const Form = ({ booksList, setBooksList }: IFormProps) => {
+export const Form = ({ setBooksList }: IFormProps) => {
   const {
     register,
     handleSubmit,
@@ -23,7 +22,9 @@ export const Form = ({ booksList, setBooksList }: IFormProps) => {
 
   const onSubmit: SubmitHandler<TFormValues> = (formValue) => {
     const currentBook = { ...formValue, id: uuidv4() };
-    setBooksList([...booksList, currentBook]);
+    // setBooksList([...booksList, currentBook]);
+
+    setBooksList((booklist) => [...booklist, currentBook]);
 
     reset();
   };
